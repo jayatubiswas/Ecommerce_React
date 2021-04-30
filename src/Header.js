@@ -2,13 +2,17 @@ import React from 'react';
 import './Header.css';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Link } from 'react-router-dom';
 function Header() {
     return (
         <div className='header'>
-          <img
+            <Link to="/">
+            <img
                 className="header__logo"
                 src="https://www.freepnglogos.com/uploads/flipkart-logo-png/flipkart-logo-transparent-vector-3.png" data-original="/uploads/flipkart-logo-png/flipkart-logo-transparent-vector-3.png" alt="Flipkart" title="Flipkart"
             />
+            </Link>
+
             <div className='header__search'>
                <input 
                className='header__searchInput'
@@ -33,15 +37,17 @@ function Header() {
                     </span>
 
                 </div>
-                <div className="header__option">
 
-                </div>
             </div>
+                <Link to="/checkout">
+                    <div className="header__optionBasket">
+                        <ShoppingCartIcon />
+                        <span className="header__optionLineTwo header__basketCount">0</span>
+                    </div>
+                </Link>
+            
 
-            <div className="header__optionBasket">
-                <ShoppingCartIcon />
-                <span className="header__optionLineTwo header__basketCount">0</span>
-            </div>
+
           
         </div>
     )

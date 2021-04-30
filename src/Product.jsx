@@ -24,6 +24,11 @@ function Product({title,image,price,rating}) {
                    <button className="product__button">
                     Add to Cart
                     </button>
+                    <div>
+                    <button className="product__button">
+                    Buy Now
+                    </button>
+                    </div>
                 </div>
 
             </div>  
